@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BinarySearch {
 
     static int swap(int number, int dummy) {
@@ -23,12 +25,34 @@ public class BinarySearch {
                     arr[j] = swap(arr[j + 1], arr[j + 1] = arr[j]);
                 }
             }
-            if (i > 2) {
+            if (i >= 2) {
                 count++;
             }
         }
         return arr;
     }
+
+    public static boolean find(int arr[], int number) {
+        int middle, start = 0, end = arr.length;
+        boolean found = false;
+        while (start <= end && !found) {
+            middle = (end - start) / 2;
+            if (arr[middle] == number) {
+                found = true;
+            } else if (arr[middle] < number) {
+                end = middle;
+            } else {
+                start = middle;
+            }
+            if (start == end)
+                found = true;
+        }
+        if (start == end) {
+            found = !found;
+        }
+        return found;
+    }
+
     public static void main(String[] args) {
         // int a = 10;
         // int b = 12;
@@ -36,10 +60,16 @@ public class BinarySearch {
         // System.out.println(a + "\t" + b);
 
         // + Swap work
-        int[] arr = {0, 13, 8, 23, 45, 1, 10 };
-        int[] rs = bbSort(arr, 7);
-        for (int i = 0; i < rs.length; i++) {
-            System.out.println(rs[i]);
+        int[] source = { 12, 1, 67, 23, 45, 1, 10 };
+        // 1, 1, 10, 12, 23, 45, 67
+        int[] sortedArr = bbSort(source, source.length);
+        try (Scanner scan = new Scanner(System.in)) {
+            System.out.print("Enter number : ");
+            int number = scan.nextInt();
+            System.out.println((find(sortedArr, number) ? "Found " + number : "Not found " + number));
         }
+        catch (Exception e) {
+            System.out.println("Wrong datatype.");
+        };
     }
 }
