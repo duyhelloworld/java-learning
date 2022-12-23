@@ -1,9 +1,10 @@
-package Java64;
+package Java64.BoxHash;
 
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
-
-public class Box_Hash {
+ 
+public class BoxHash {
     Set<String> box = new HashSet<String>();
     private int lengthCode;
 
@@ -15,10 +16,10 @@ public class Box_Hash {
         this.lengthCode = lengthCode;
     }
 
-    public Box_Hash() {
+    public BoxHash() {
     }
 
-    public Box_Hash(Set<String> box) {
+    public BoxHash(Set<String> box) {
         this.box = box;
     }
 
@@ -26,14 +27,14 @@ public class Box_Hash {
         return this.box;
     }
 
-    public int hashCode(Set<String> box2) {
+    public int hashCode(Set<String> box) {
         return this.hashCode(box);
     }
 
     @Override
     public String toString() {
         return "{" +
-                " box='" + getBox() + "'" +
+                " box : '" + getBox() + "'" +
                 "}";
     }
     
@@ -43,6 +44,10 @@ public class Box_Hash {
 
     public boolean addCode(String code) {
         return box.add(code);
+    }
+
+    public int size(){
+        return box.size();
     }
     
     public void showAllCodeInBox() {
@@ -69,7 +74,20 @@ public class Box_Hash {
         return box.remove(code);
     }
 
-    public int sweepstakes(String code) {
+    public int totalCodeInBox() {
+        return this.box.size();
+    }
+
+    private String getRandomCode() {
+        String codeRand = "";
+        Random rd = new Random();
+        int index = rd.nextInt(totalCodeInBox());
+        codeRand = this.box.toArray()[index].toString().substring(rd.nextInt(this.lengthCode));
+        return codeRand;
+    }
+    
+    public int sweepstakes() {
+        String code = getRandomCode();
         if (this.searchCode(code)) {
             return 1;
         }

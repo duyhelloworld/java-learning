@@ -22,8 +22,8 @@ public class DecimalToBin {
             }
             System.out.println();
             System.out.println("Enter your decimal number : ");
-            int decimal = scan.nextInt();
-            Stack<Integer> result = new Stack<Integer>();
+            // int decimal = scan.nextInt();
+            // Stack<Integer> result = new Stack<Integer>();
             int rest, surplus;
             do {
                 rest = decimal % 2;
