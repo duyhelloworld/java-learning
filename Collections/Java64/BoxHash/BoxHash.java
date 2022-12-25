@@ -1,5 +1,6 @@
 package Java64.BoxHash;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -51,9 +52,10 @@ public class BoxHash {
     }
     
     public void showAllCodeInBox() {
-        for (String code : box) {
-            System.out.println(code);
-        }
+        // for (String code : box) {
+        //     System.out.println(code);
+        // }
+        System.out.println(Arrays.toString(this.box.toArray()));
         System.out.println("Now box has " + box.size() + (box.size() < 2 ? " code." : " codes."));
     }
 
