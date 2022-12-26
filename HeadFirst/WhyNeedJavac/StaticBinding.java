@@ -5,13 +5,14 @@ package WhyNeedJavac;
  */
 public class StaticBinding {
 
-    String eat() {
-        System.out.println("I\"m String");
-        return "String";
+    String getName() {
+        return "I\" in Static";
     }
 
     public static void main(String[] args) {
         StaticBinding sb = new StaticBinding();
-        sb.eat();
+        System.out.println(sb.getName());
+
+        // > Data type + value is static when run app
     }
 }
