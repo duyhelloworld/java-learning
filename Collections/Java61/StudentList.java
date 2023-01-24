@@ -164,11 +164,14 @@ public class StudentList {
                     return 0;
             }
         });
+
+        
         // New id
         ArrayList<Student> listResult = listStudents;
+
         int sizeList = listResult.size();
         for (int i = 0; i < sizeList; i++) {
-        listResult.get(i).setId(i+1);
+            listResult.get(i).setId(i+1);
         }
         return listResult;
     }
