@@ -1,4 +1,4 @@
-package Abtract.Exec.Bai1;
+package abtraction.Exec.Bai1;
 
 public interface Phone {
     public abstract void removePhone(String name, String phone);
