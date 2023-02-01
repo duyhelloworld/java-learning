@@ -1,4 +1,4 @@
-class SinhVat{
+class SinhVat {
     private String name;
     private String species;
     private int age;
@@ -21,11 +21,12 @@ class SinhVat{
 class LinhTruong extends SinhVat{
     private String branch;
 
-    public LinhTruong(String name, String species, int age, String branch){
+    public LinhTruong(String name, String species, int age, String branch) {
         super(name, species, age);
         this.branch = branch;
     }
-// @Override  // < @ chỉ làm tag thui :)
+    
+    @Override  // < @ chỉ làm tag thui :)
     public void show(){
         // > show() ở đây giống cha nó ở trên, nhưng có thể sửa phá --> Lợi và hại đều có
         // < Nếu Object của LinhTruong gọi show(), luôn gọi LinhTruong.show() ko phải SinhVat.show()
@@ -70,6 +71,6 @@ class tinhDiem{
 public class Bai16_overRiding_overLoadng {
 
     public static void main(String[] args) {
-        
+        System.out.println("Main ko co gi.");
     }
 }
