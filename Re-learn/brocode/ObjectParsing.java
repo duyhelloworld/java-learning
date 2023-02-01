@@ -1,5 +1,4 @@
 // package Bro_Code;
-// - Delete the above line to run
 
 class Bike {
     String name;

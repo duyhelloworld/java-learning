@@ -33,27 +33,32 @@ class Anime {
 
 // Ở đây, cha là Anime, Romance là con
 
-class RomanceAnime extends Anime{
+// - Keyword để kế thừa là extends
+class RomanceAnime extends Anime {
     public String levelGlocoze;
     // > Thuộc tính mới ở lớp con có thể thêm vào
-    public RomanceAnime(String name, String author, int yearToPublish, String levelGlucoze){
+
+    public RomanceAnime(String name, String author, int yearToPublish, String levelGlucoze) {
+        // - Gán lại các đồ của Anime
         // this.name = name;
         // this.yearToPublish = yearToPublish;
+
         // this.author = author;
-        // author là privated --> ko kế thừa kiểu này đc
+        // author là privated --> kế thừa ko cho Romance truy cập author.
         
         // > Vì việc gán ở trên quá dài dòng -> super ra đời
         super(name, author, yearToPublish);
+        // --> Tác dụng super như là this bản có con thôi
 
         this.levelGlocoze = levelGlucoze;
     }
     // > Constructor additional
 
-    // > Phương thức mới
+    // > Phương thức mới có thể thêm vào con
     public void fanAniverary(){
-        // super(this.fanAniverary()); // ! Ko có kiểu kế thừa v đâu
+        // super(this.fanAniverary()); // ! Ko xài super đc vì cha méo cho
         // this.fanAniverary();
-        // ! Dòng trên đem đc, nhưng ko có tính kế thừa đou.
+        // ! Dòng trên đem đc, nhưng hàm gọi lại là hàm con --> tác dụng viết lại = 0
         super.fanAniverary();
         
         System.out.println("From Romance Fan with Luv");

@@ -1,8 +1,10 @@
 import java.util.Scanner;
 public class Bai15_setter_getter {
     
-    public static void main(String[] args) {
+    public static void main(String[] args)
+      {
         Scanner scan = new Scanner(System.in);
+
         /*
          * Bình thường, hàm khởi tạo sẽ nhận giá trị ko qua chọn lọc
          * VD : private int age thì ta phải xét tuổi trong khoảng của người, ko để âm hay quá tuổi MAX
