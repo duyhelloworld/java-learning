@@ -1,5 +1,3 @@
-import java.io.File;
-
 /*
  * Đảm bảo số dấu phẩy động khi cross-platform luôn bảo toàn 
  * Áp dụng chỉ cho class, Interface và method
@@ -31,7 +29,7 @@ public class Bai21_synchronized extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Now is " + Thread.activeCount() + " thread in " + ThreadGroup);
+        System.out.println("Now is " + Thread.activeCount() + " thread in " + ThreadGroup.class.toGenericString());
     
     }
 
