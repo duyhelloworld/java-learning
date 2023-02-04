@@ -13,7 +13,7 @@ class Student extends Example{
         if (ex instanceof Student) {
             Student st = (Student)ex;
             // > DownCasting
-            System.out.println(st + "Da downcasting");
+            System.out.println(st + " downcasted");
         }
     }
 }

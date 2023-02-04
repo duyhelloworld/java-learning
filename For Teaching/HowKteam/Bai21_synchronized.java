@@ -1,5 +1,5 @@
 /*
- * Đảm bảo số dấu phẩy động khi cross-platform luôn bảo toàn 
+ * strictfp Đảm bảo số dấu phẩy động khi cross-platform luôn bảo toàn 
  * Áp dụng chỉ cho class, Interface và method
  * Đã xóa từ java 17
  */
