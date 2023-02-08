@@ -1,6 +1,4 @@
-package linkedlist;
-
-/**
+/* 
  * LinkedList
  */
 
@@ -12,7 +10,8 @@ public class LinkedList {
         this.head = null;
         this.tail = null;
     }
-    public Boolean isEmpty() {
+
+    public boolean isEmpty() {
         if (this.head == null) {
             return true;
         }
@@ -20,7 +19,7 @@ public class LinkedList {
     }
 
     public void addToHead(Node node) {
-        if (this.head == null) {
+        if (this.isEmpty()) {
             this.head = node;
             this.tail = node;
         }
@@ -43,13 +42,13 @@ public class LinkedList {
 
     public int size() {
         int size = 1;
-        Node node_index = this.head;
+        Node curr = this.head;
         if (this.isEmpty()) {
             return 0;
         } else {
-            while (node_index.getNext() != null) {
+            while (curr.getNext() != null) {
                 size++;
-                node_index = node_index.getNext();
+                curr = curr.getNext();
             }
             return size;
         }
@@ -57,10 +56,10 @@ public class LinkedList {
 
     public void display() {
         if (!this.isEmpty()) {
-            Node node_ptr = this.head;
-            while (node_ptr != null) {
-                System.out.print(node_ptr.getData() + "\t");
-                node_ptr = node_ptr.getNext();
+            Node curr = this.head;
+            while (curr != null) {
+                System.out.print(curr.getData() + "\t");
+                curr = curr.getNext();
             }
             System.out.println();
         } else {
@@ -68,7 +67,7 @@ public class LinkedList {
         }
     }
 
-    public boolean isNode(int data) {
+    public boolean contains(int data) {
         Node ptr = this.head;
         boolean found = false;
         while (ptr.getNext() != null) {
@@ -80,10 +79,11 @@ public class LinkedList {
         return found;
     }
     
-    void remove(int data ) {
-        if (this.isNode(data)) {
+    void remove(int data) {
+        if (this.contains(data)) {
             Node target = Node.setNode(data);
             Node ptr = this.head;
+            
             while (ptr.getNext() != null) {
                 if (ptr.getNext().equals(target)) {
                     ptr.setNext(target.getNext());
@@ -99,16 +99,17 @@ public class LinkedList {
     }
 
  
-    public void remove(short index) {
+    public int indexOf(Node node) {
         Node ptr = this.head;
         int i = 0;
-        while (ptr.getNext() == null) {
-            i++;
-            if (i == index) {
-                ptr.setNext(ptr.getNext().getNext());
+        while (ptr.getNext() != null) {
+            if (ptr.equal(node) || ptr.getNext() == null) {
+                return i;
             }
+            i++;
             ptr = ptr.getNext();
         }
+        return 0;
     }
 
     public Node getHead() {

@@ -1,6 +1,7 @@
 /*
  * Linked List
  */
+
 public class Node {
     private Node next;
     private int data;
@@ -28,11 +29,7 @@ public class Node {
         return node;
     }
 
-    public boolean equals(Node node) {
-        if (this.getData() == node.getData() && this.getNext() == node.getNext()) {
-            return true;
-        }
-       return false;
+    public boolean equal(Node node) {
+        return this.getData() == node.getData();
     }
-
 }

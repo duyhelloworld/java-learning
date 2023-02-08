@@ -6,6 +6,7 @@ public class BinarySearch {
         return number;
     }
 
+    // >>> Sort by 
     // public static int[] sort(int[] array, int size) {
     //     for (int i = 0; i < size; i++) {
     //         for (int j = size - 1; j > 0; j--) {
