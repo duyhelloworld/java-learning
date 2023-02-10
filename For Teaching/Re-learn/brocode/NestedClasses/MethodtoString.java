@@ -1,3 +1,4 @@
+package NestedClasses;
 class Bike{
     String name = "Kawasaki";
     String color = "red, black";

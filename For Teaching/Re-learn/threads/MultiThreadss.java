@@ -9,7 +9,12 @@ public class MultiThreadss implements Runnable {
 
     public static void main(String[] args) {
         MultiThreadss threads = new MultiThreadss();
-        threads.run(); 
+        threads.run();
+        try {
+            threads.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        threads.notify();
     }
-    
 }
