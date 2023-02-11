@@ -2,7 +2,7 @@ package binarysearchtree;
 
 public class Node {
     int value;
-    Node left, right, parent;
+    Node left, right;
 
     public static Node newNode(int value) {
         Node node = new Node(value);
@@ -26,7 +26,7 @@ public class Node {
 
     @Override
     public int hashCode() {
-        return Objects.hash(value, left, right, parent);
+        return Objects.hash(value, left, right);
     }
 
     @Override
