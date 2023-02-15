@@ -6,14 +6,14 @@ package com.datastructure.tree;
 import java.util.Stack;
 
 public class AVLTree {
-
+    
     public class Node {
-
+    
         int value;
         int height;
         Node left;
         Node right;
-
+    
         Node(int value) {
             this.value = value;
         }

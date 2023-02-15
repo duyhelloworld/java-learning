@@ -13,8 +13,8 @@ public class StackApp {
  * - clear()
  * - contains(Object value)
  * - isEmpty()
- * @param args
- */
+ * @author duypham
+*/
 
     public static void main(String[] args) {
         try (Scanner scan = new Scanner(System.in)) {
