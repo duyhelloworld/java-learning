@@ -1,31 +1,28 @@
-// package duytree;
-
-// import java.util.Stack;
-
 public class Node {
-    int data;
+    int value;
     Node left, right;
+    int level;
 
-    public Node(int data) {
-        this.data = data;
+    public Node(int value) {
+        this.value = value;
     }
 
-    public Node insertNode(Node root, int data) {
-        Node node = new Node(data);
+    public Node insertNode(Node root, int value) {
+        Node node = new Node(value);
         if (root == null) {
             return node;
         } else {
             Node temp = root;
 
             while (true) {
-                if (data < temp.data) {
+                if (value < temp.value) {
                     if (temp.left == null) {
                         temp.left = node;
                         break;
                     } else {
                         temp = temp.left;
                     }
-                } else if (data > temp.data) {
+                } else if (value > temp.value) {
                     if (temp.right == null) {
                         temp.right = node;
                         break;
@@ -38,15 +35,15 @@ public class Node {
         }
     }
 
-    public Node insertRecursion(Node root, int data) {
+    public Node insertRecursion(Node root, int value) {
         if (root == null) {
-            return new Node(data);
+            return new Node(value);
         }
-        if (data < root.data) {
-            root.left = insertRecursion(root.left, data);
+        if (value < root.value) {
+            root.left = insertRecursion(root.left, value);
         }
-        if (data > root.data) {
-            root.right = insertRecursion(root.right, data);
+        if (value > root.value) {
+            root.right = insertRecursion(root.right, value);
         }
         return root;
     }
@@ -55,7 +52,7 @@ public class Node {
         // Node temp = root;
         // int lv = 0;
         // while (true) {
-        // System.out.println(temp.data);
+        // System.out.println(temp.value);
         // System.out.print("Level " + lv + " : ");
 
         // for (int k = 0; k < Math.pow(k, lv); k++) {
@@ -79,40 +76,39 @@ public class Node {
     }
 
     public int sizeTree(Node root) {
-        // Stack<Node> st = new Stack<Node>();
         if (root == null) {
-
+            
         } else {
             // while (true) {
-            // st.push(root);
-            // if (root.left != null) {
-            // st.push(root.left);
-            // } else if (root.right != null) {
-            // st.push(root.right);
-            // } else if (root == null) {
+            //     st.push(root);
+            //     if (root.left != null) {
+            //         st.push(root.left);
+            //     } else if (root.right != null) {
+            //         st.push(root.right);
+            //     } else if (root == null) {
 
-            // }
+            //     }
             // }
         }
-        // return st.size();
         return 0;
+        // return st.size();
     }
 
-    public boolean isExist(Node root, int data) {
+    public boolean isExist(Node root, int value) {
         if (root == null) {
             return false;
         } else {
-            if (root.data > data) {
+            if (root.value > value) {
                 if (root.left == null) {
                     return false;
                 } else {
-                    return isExist(root.left, data);
+                    return isExist(root.left, value);
                 }
-            } else if (root.data < data) {
+            } else if (root.value < value) {
                 if (root.right == null) {
                     return false;
                 } else {
-                    return isExist(root.right, data);
+                    return isExist(root.right, value);
                 }
             } else {
                 return true;
@@ -124,10 +120,10 @@ public class Node {
         if (root == null) {
             return false;
         }
-        if (value == root.data) {
+        if (value == root.value) {
             return true;
         } else {
-            if (value < root.data) {
+            if (value < root.value) {
                 return searchNode(root.left, value);
             } else {
                 return searchNode(root.right, value);
@@ -137,12 +133,17 @@ public class Node {
 
     // @Override
     public String toString(Node root) {
-        return "";
+        String text = null;
+        while (true) {
+
+        }
+
+        // return text;
     }
 
     public void preOrder(Node root) {
         if (root != null) {
-            System.out.print(root.data + "\t");
+            System.out.print(root.value + "\t");
             preOrder(root.left);
             preOrder(root.right);
         }
@@ -151,14 +152,14 @@ public class Node {
     public void inOrder(Node root) {
         if (root != null) {
             inOrder(root.left);
-            System.out.print(root.data + "\t");
+            System.out.print(root.value + "\t");
             inOrder(root.right);
         } else {
             // System.out.print("_");
         }
     }
 
-    // public void
+    // public void 
     public boolean isLeaf(Node node) {
         return node.left == null && node.right == null;
     }
@@ -172,14 +173,14 @@ public class Node {
     }
 
     public Node delNode(Node cur, int value) {
-
+        
         if (cur == null) {
             return null;
         }
 
-        if (value < cur.data) {
+        if (value < cur.value) {
             cur.left = delNode(cur.left, value);
-        } else if (value > cur.data) {
+        } else if (value > cur.value) {
             cur.right = delNode(cur.right, value);
         } else {
             // + Leaf
@@ -195,9 +196,9 @@ public class Node {
             }
             // + 2 child
             Node nodeSmallest = findLeftSmallest(cur.right);
-            cur.data = nodeSmallest.data;
+            cur.value = nodeSmallest.value;
 
-            cur.right = delNode(cur.right, nodeSmallest.data);
+            cur.right = delNode(cur.right, nodeSmallest.value);
         }
         return cur;
     }

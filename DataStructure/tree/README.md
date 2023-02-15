@@ -10,10 +10,13 @@
 > - Mỗi node lưu giá trị của nó cùng 1 tham chiếu 
 ```("reference")``` tới các node con của nó.
 
-![alt](/tree/tree_introduction.png)
+![alt](/tree_introduction.png)
 
 > - Thành phần của 1 cây gọi như nào nên tra mạng.
-> - Tính recursive 
+
+![alt](/list_tree_elements.png)
+
+> - Tính recursive cao
 
 [Link Call Stack + Recursion](https://youtu.be/BNeOE1qMyRA)
 > Tự hiểu Tree sẽ hoạt động sao.

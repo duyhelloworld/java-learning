@@ -1,11 +1,11 @@
-public class BinSTree {
+public class BST {
     Node root;
 
-    public BinSTree() {
+    public BST() {
         root = null;
     }
     
-    public BinSTree(int data) {
+    public BST(int data) {
         this.root = Node.newNode(data);
     }
 
