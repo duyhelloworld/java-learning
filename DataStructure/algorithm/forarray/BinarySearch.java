@@ -1,3 +1,4 @@
+package forarray;
 import java.util.Scanner;
 
 public class BinarySearch {
