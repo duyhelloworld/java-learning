@@ -51,7 +51,7 @@ ___
 ## Groups of Design Patterns
 - Despite of the cristicism, learning how to use DP effective won't be a very difficult task, so if you believe you can archive it, let try my list below.
 ### Creational Patterns
-> - [Singleton]()
+> - [Singleton](/Singleton.md)
 > - [Factory Method]()
 > - Abtract Factory
 > - Builder
