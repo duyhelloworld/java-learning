@@ -61,8 +61,6 @@ public class Bai0_main {
     // }
     
     
-
-
     // + Usage of "String[] args"
     // https://www.scaler.com/topics/string-args-in-java/
 
