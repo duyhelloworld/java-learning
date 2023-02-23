@@ -16,7 +16,7 @@ public class Person {
     @JsonElement(jsonType = JsonValueType.NUMBER)
     private int age;
 
-    @JsonElement(jsonType = JsonValueType.STRING)
+    @JsonElement
     private String email;
     
     @JsonElement(jsonType = JsonValueType.BOOLEAN)
@@ -49,6 +49,5 @@ public class Person {
             } catch (JsonSerializationException e) {
             }
         }
-        
     }
 }

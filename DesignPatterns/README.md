@@ -1,26 +1,39 @@
 # Design Pattern - One of success keys for good software developers
 
-*`This essay's example is written in Java. Please get the basic Java core and OOP skills first, and you can mark it somewhere in your device to read later`*
-## What Is Design Pattern? What's it solve
-- First, let back to the past, when programming is only inceptive structure. Our forerunners in the profession has developed the typical app several time, based on Object-Oriented programming languages. They __meet the same problem__,__follow a conception__ and __do the same solution__. 
+*`This essay's examples are written in Java. Please get the basic Java core and OOP skills first, or you can mark it somewhere in your device to read later`*
 
-    But noone make it more __architectural__ and aggregate this solutions,
-    or make it more 'easy-access' for other junior.
-- In  1995, there are four person - senior developer who aggregate and write to the [Design Patterns: Elements Of Reusable Object-Oriented Software]("http://www.amazon.co.uk/Design-patterns-elements-reusable-object-oriented/dp/0201633612") - the "bible" of many software developer over time (The authors is call `"Gang of Four"`). This book has architect 23 "forms" of solution for developer in OOP language (Later, some language's owner operater like Oracle(Java) and Microsoft(C#) has support many features for their language based in them). [Link](https://www.oracle.com/technical-resources/articles/javaee/j2eepatterns.html)
+## What Is Design Pattern?
+- First, let back to the past, when programming is only inceptive structure. Our forerunners in the profession has developed the typical app several time, based on Object-Oriented programming languages. They __meet the same problem__,__follow a conception__ and __work in the same solution__. 
+But noone make it more __architectural__ and aggregate these solutions, or make it more 'easy-access' for other junior. 
+    
+    So, the software development process often extended
+    caused many negative impacts:
+> - Consuming a lot of effort, time, and money of customers, reducing the credibility of the business
+> - Decreasing the product lifespan
+> - Easy lead to potential vulnerabilities or overlooked issues
+> - Make difficulties in maintaining and upgrading the project in the future
+> - Causing challenges for developers to unify common conventions.
+
+- Over time, Libraries and frameworks appeared, supported much for making faster software development process and went a long towards a development model where we can just pick and choose componets and plug them right in. But... they don't help p us structure our own applications in ways that are easier to understand, more
+maintainable and flexible. That’s where Design Patterns come in. 
+
+- In  1995, there are 4 senior developers who aggregate and write to the [Design Patterns: Elements Of Reusable Object-Oriented Software]("http://www.amazon.co.uk/Design-patterns-elements-reusable-object-oriented/dp/0201633612") - the "bible" of many software developer over time (The authors is call `"Gang of Four"`). This book has architect 23 "forms" for developers to structure classes and objects to
+solve certain problems in many OOP languages. It encouraged the "big techs" like Oracle(Java) and Microsoft (C#) on supporting most of features for their language to conform with these "forms").
 
     These "forms" is called "design pattern" - which we will explore today.
-Like data structures and algorithms, it isn't in a special programming language , but it can implement easiest and powerest in the OO programming language (general and pure like Java, C# or support for OOP like Python, C++, JavaScript). 
-`It's just the pattern for one or some problem which it can solve effectively.`
+    
+### What's it solve?
 
-- Design Patterns is divided into layers, based on **level of problem** you meet (medium, difficult), not your **coding level**. So, please don't use it for show off your ability by using so much design patterns. It may have the opposite effect and make other problem. **It's created to solve the complex problem, not to make the problem more complex.**
+Like data structures and algorithms, it isn't in a special programming language , but it can implement easiest and powerest in the OO programming language (general and pure like Java, C# or support for OOP like Python, C++, JavaScript). 
+`Each design patterns just is the pattern for one or some problem which it can solve effectively.`
 
 ___
 `Definition`: "In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software design. It offer a best practice approach to support object-oriented software design, which is easier to design, implement, change, test and reuse."
 ___
 
 ## How's a Design Pattern structured?
-- Each design pattern solve it's problem, and base on them, it suggest a design pattern which is most suitable and approciated conception and implementation.
-- Best practice of learning Design Patterns is follow 3 issue of this design pattern : 
+- Each design pattern solve it's problem, and base on the problem, it suggest one or more design pattern which is  suitable and approciated (in both conception and implementation).
+- Best practices of learning Design Patterns is follow 3 issue of this design pattern : 
 > + Problem : "What's it solve?"
 > + UML     : "How's it look?"
 > + Code example : "How to implement it?"
@@ -49,10 +62,11 @@ ___
 `The MVC , MVP and MVVM are use the same logic for implementation, just enhance some feature in a layer. Used by several year, if you expect a new architecture will make "big change" in our current architecture,  it will never be impossible. The "path thinking" make both us and big corperation can't leave the shadow of safety and laziness.`
 
 ## Groups of Design Patterns
-- Despite of the cristicism, learning how to use DP effective won't be a very difficult task, so if you believe you can archive it, let try my list below.
+- Despite of the cristicism, desgin patterns have contributed a lot to the Software Engineering History, so I recommend you shoud learn it if you want to become a better engineer. Here is my essay's content about the 5 most popular design patterns which I explored (I divided it into 3 groups by its type).
+
 ### Creational Patterns
 > - [Singleton](/Singleton.md)
-> - [Factory Method]()
+> - [Factory Method](/Factory.md)
 > - Abtract Factory
 > - Builder
 > - Prototype
@@ -76,14 +90,23 @@ ___
 > - [Stategy]()
 > - State
 > - Visitor
+### Structure Pattern (Likely an architecture and pattern)
+> - MVC
+> - MVP
+> - MVVM
 
-
-
+After years, the developer community has developed many 
+other design pattern which's more modern and effective. 
 
 
 <!-- Blog of some "Trashing DP" -->
 [](https://www.red-gate.com/simple-talk/blogs/why-following-design-patterns-is-a-bad-idea/)
 [](https://sourcemaking.com/design_patterns)
+
+
+### What's the worst issues junior usually meet when learn it?
+- Design Patterns is divided into layers, based on **level of problem** which you meet (medium, difficult), not on the **coding level** you have. So, please don't use them for show off your coding skill by using so much design patterns into a project. It may cause many opposite effects and bad affects to your work.
+REMEMBER : **Design patterns are created to solve the complex problem, not to make the problem more complex.**
 
 ```
 - When we have not studied the religion, we see mountains as mountains,  rivers as rivers. 
