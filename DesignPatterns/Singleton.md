@@ -3,7 +3,7 @@
 ## What's Singleton ?
 - The Singleton Pattern - like its name "singleton" -
 assures that at any one time
-there is only one instance of the Singleton object and  provides a global access point to this instance. In other words, the Singleton's purpose is to control object creation, limiting the number of obejcts to one only.he
+there is only one instance of the Singleton object and  provides a global access point to this instance. In other words, the Singleton's purpose is to control object creation, limiting the number of objects to one only per application.
 
 ## UML
 ![](/singleton/singleton_uml.png)
@@ -36,8 +36,8 @@ public class DuckShop {
         Duck _duck1 = Duck.getInstance();
         Duck _duck2 = Duck.getInstance();
         System.out.println(_duck1.equals(_duck2));  // true
-        // Despite of the number of object created, just 
-        // instance is created and they are equal together
+        // Despite of the number of object created, just 1
+        // instance is created. At first, they are the same, so we can save more space and easy to interact with.
     }
 }
 ```

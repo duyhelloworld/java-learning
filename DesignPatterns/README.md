@@ -51,7 +51,7 @@ ___
 > - Builder
 > - Prototype
 #### Structural Patterns
-> - Adaptor
+> - Adapter
 > - [Facade]()
 > - [Decorator]()
 > - Flyweight
