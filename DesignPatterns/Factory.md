@@ -9,7 +9,7 @@
 - Its purpose is make your code loose coupled and more flexible. In the ordinary way, when you need to set up a `CoffeeFactory` you will type something like :
 
 ```java
-public class Coffee {
+public abstract class Coffee {
     String typeName;
     int voteOfUsers;
     boolean isCoveredByLatteArt();

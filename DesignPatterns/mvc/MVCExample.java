@@ -1,6 +1,7 @@
 public class MVCExample {
     public static void main(String[] args) {
         ControllerStudent controller = new ControllerStudent();
+        controller.initial();
         controller.showDetail();
 
         controller.rename("duycodengu");
