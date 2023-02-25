@@ -123,3 +123,4 @@ public class CoffeeShop {
 ## Where used it?
 - JDK : util.Calendar, NumberFormat,...
 - BeanFactory in Spring Framework, SessionFactory in Hibernate
+- Redefinement of it : Dependency Injection (Spring, .Net, Django)
