@@ -30,8 +30,8 @@ public class Capucino extends Coffee {
 - But that make your code depend on the extensions of `Coffee`.
 
 ```java
-    Coffee americano = new Americano();
-    Coffee capucino = new Capucino();
+Coffee americano = new Americano();
+Coffee capucino = new Capucino();
 ```
 
 - Now your sir want to extend coffee's type to `Espressino` without change their code so much, because their CoffeeShop is still working. You can create again class `Espressino` extends `Coffee`, but you must change almost code which refer to them. Now, you are need for Factory Design Pattern
@@ -101,8 +101,14 @@ public class CoffeeFactory {
 ```java
 public class CoffeeShop {
     public static void main(String[] args) {
-        Coffee latteCoffee = CoffeeFactory.getCoffee(CoffeeType.CAPUCINO);
-        System.out.println(latteCoffee.getCoffeeName());
+         Coffee capucino = CoffeeFactory.getCoffee(CoffeeType.CAPUCINO);
+        System.out.println(capucino.getCoffeeName());
+
+        Coffee espressino = CoffeeFactory.getCoffee(CoffeeType.ESPRESSINO);
+        System.out.println(espressino.getCoffeeName());
+
+        Coffee americano = CoffeeFactory.getCoffee(CoffeeType.AMERICANO);
+        System.out.println(americano.getCoffeeName());
     }
 }
 ```

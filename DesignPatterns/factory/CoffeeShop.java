@@ -5,10 +5,10 @@ public class CoffeeShop {
         Coffee capucino = CoffeeFactory.getCoffee(CoffeeType.CAPUCINO);
         System.out.println(capucino.getCoffeeName());
 
-        Coffee espressino = CoffeeFactory.getCoffee(CoffeeType.CAPUCINO);
+        Coffee espressino = CoffeeFactory.getCoffee(CoffeeType.ESPRESSINO);
         System.out.println(espressino.getCoffeeName());
 
-        Coffee americano = CoffeeFactory.getCoffee(CoffeeType.CAPUCINO);
+        Coffee americano = CoffeeFactory.getCoffee(CoffeeType.AMERICANO);
         System.out.println(americano.getCoffeeName());
     }
 }

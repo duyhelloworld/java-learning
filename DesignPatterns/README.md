@@ -37,12 +37,12 @@ ____
 - Each design pattern solve it's problem, and base on the problem, it suggest one or more design pattern which is  suitable and approciated (in both conception and implementation).
 - Best practices of exploring Design Patterns is follow 3 issue of this design pattern : 
 > + Problem : "What's it solve?"
-> + UML     : "How's it look?"
+> + UML     : "How's it solve?"
 > + Code example : "How to implement it?"
 
 ___
-## Groups of Design Patterns
-- Despite of the cristicism, desgin patterns have contributed a lot to the Software Engineering History, so I recommend you shoud learn it if you want to become a better engineer. Here is my essay's content about the 5 most popular design patterns which I explored (I divided it into 3 groups by its type).
+## Types of Design Patterns
+- Here is my essay's content about the 5 most popular design patterns which I explored (I divided it into 3 groups by its type).
 
 #### Creational Patterns
 > - [Singleton](/Singleton.md)
@@ -108,13 +108,17 @@ ____
 
 *For more information, please research about the `anti-patterns` - which is the pattern that opposite the standard design pattern, developed by most scientist and high-experience engineers.*
 
+`Despite of the cristicism, desgin patterns have contributed a lot to the Software Engineering History, so I recommend you shoud learn it if you want to become a better engineer`
+
 <!-- Blog of some "Trashing DP" -->
 [](https://www.red-gate.com/simple-talk/blogs/why-following-design-patterns-is-a-bad-idea/)
 [](https://sourcemaking.com/design_patterns)
 
 ___
 ## What's the worst issue junior usually meet when learn how to use it?
-- Design Patterns is divided into layers, based on **level of problem** which you meet (medium, difficult), not on the **coding level** you have. So, please don't use them for show off your coding skill by using so much design patterns into a project. It may cause many opposite effects and bad affects to your work.
+- Learn quickly, learrn fast, not learn deep.
+Its result is the "target wrong problem" I said above. 
+- Design Patterns is divided into layers, based on **level of problem** which you meet (medium, difficult), not on the **coding level** you have. So, please don't use them for show off your coding skill by using so many design patterns into a project. It may cause many opposite effects and bad affects to your work.
 
 *REMEMBER : **Design patterns are created to solve the complex problem, not to make the problem more complex.***
 
