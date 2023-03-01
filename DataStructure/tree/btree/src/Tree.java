@@ -3,44 +3,18 @@ import java.util.Stack;
 public class Tree implements Methods {
 
     Node root;
-    int level;
+    private int level;
 
     public Tree() {
     }
 
     @Override
-    public Node insertRecursion(Node parent, int value) {
+    public void add(int value) {
         Node node = new Node(value);
-        if (parent == null) {
-            this.root = node;
-            return node;
-        }
-
-        if (parent.value < value) {
-            if (parent.right == null) {
-                parent.right = node;
-                this.level++;
-                return node;
-            }
-            return insertRecursion(parent.right, value);
-        }
-        if (parent.value > value) {
-            if (parent.left == null) {
-                parent.left = node;
-                this.level++;
-                return node;
-            }
-            return insertRecursion(parent.left, value);
-        }
-        return null;
-    }
-
-    @Override
-    public void insertNode(Node parent, int value) {
-        Node node = new Node(value);
-        Node pointer = parent;
+        Node pointer = this.root;
         if (pointer == null) {
             this.root = node;
+            this.level++;
             return;
         }
 
@@ -48,6 +22,7 @@ public class Tree implements Methods {
             if (value < pointer.value) {
                 if (pointer.left == null) {
                     pointer.left = node;
+                    this.level++;
                     break;
                 }
                 pointer = pointer.left;
@@ -55,6 +30,7 @@ public class Tree implements Methods {
             if (value > pointer.value) {
                 if (pointer.right == null) {
                     pointer.right = node;
+                    this.level++;
                     break;
                 }
                 pointer = pointer.right;
@@ -114,70 +90,35 @@ public class Tree implements Methods {
 
     }
 
-    public Node EldestNode(Node parent) {
-        Node tmp = parent;
-        if (tmp == null) {
-            return null;
-        }
-        if (tmp.left != null) {
-            this.level++;
-            return EldestNode(tmp.left);
-        }
-        return tmp;
-    }
-
     @Override
     public int size() {
-        if (this.root == null) {
-            return 0;
-        } else {
-            int size = 0;
-            Stack<Node> stack = new Stack<Node>();
-            stack.push(this.root);
-            while (!stack.isEmpty()) {
-                Node top = stack.peek();
-                if (top != null) {
-                    size++;
-                    if (top.left != null) {
-                        stack.push(top.left);
-                        size++;
-                    }
-                    if (top.right != null) {
-                        stack.push(top.right);
-                        size++;
-                    }
-                }
-                stack.pop();
-            }
-            return size;
-        }
+        return this.root.size(root);
     }
 
     @Override
-    public boolean contains(Node node, int value) {
-        if (node == null) {
-            return false;
-        }
-        if (value == node.value) {
-            return true;
-        }
-        if (value < node.value) {
-            return contains(node.left, value);
-        } else {
-            return contains(node.right, value);
-        }
+    public boolean contains(int value) {
+        return root != null && root.quickSearch(this.root, value);
     }
 
     @Override
-    public Node eldestChild(Node node) {
-        // TODO Auto-generated method stub
-        return null;
+    public Node eldestChild() {
+        return this.root.elsdetNode(root);
     }
 
     @Override
-    public boolean remove(Node node) {
-        // TODO Auto-generated method stub
+    public boolean remove(int value) {
+        if (contains(value)) {
+            return this.root.delNode(this.root, value) != null;
+        }
         return false;
     }
+
+    @Override
+    public boolean isLeaf(int value) {
+        return false;        
+    }
     
+    public int childs() {
+        return this.level;
+    }
 }
