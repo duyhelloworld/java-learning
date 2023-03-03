@@ -155,5 +155,5 @@ public class Shop {
 }
 ```
 
-`Result`
+## Result
 ![](/facade/result_facade.png)

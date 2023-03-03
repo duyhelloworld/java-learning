@@ -20,7 +20,7 @@ But noone make it more __architectural__ and aggregate these solutions, or make 
             - Over time, Libraries and frameworks appeared, supported much for making faster software development process and went a long towards a development model where we can just pick and choose componets and plug them right in. But... they don't help us structure our own applications in ways that are easier to understand, more maintainable and flexible. That’s where Design Patterns come in. 
 
 - In  1995, there are 4 senior developers who aggregate and write to the [Design Patterns: Elements Of Reusable Object-Oriented Software]("http://www.amazon.co.uk/Design-patterns-elements-reusable-object-oriented/dp/0201633612") - the "bible" of many software developer over time (The authors is call `"Gang of Four"`). This book has architect 23 "forms" for developers to structure classes and objects to
-solve certain problems in many OOP languages. It encouraged the software engineers should study and structure the product in a more effective way. Some language's corporations like Oracle (Java) and Microsoft (C#) on supporting a lot of features for their language to conform with these "forms").
+solve certain problems in many OOP languages. It encouraged the software engineers should study and structure the product in a more effective way. Some language's corporations like Oracle (Java) and Microsoft (C#) on supporting a lot of features for their language to conform with these "forms".
 
     These "forms" is called "design pattern" - which we will explore today.
     
@@ -53,7 +53,7 @@ ___
 #### Structural Patterns
 > - Adapter
 > - [Facade]()
-> - [Decorator]()
+> - Decorator
 > - Flyweight
 > - Proxy
 > - Composite
@@ -63,21 +63,20 @@ ___
 > - Template Method
 > - Chain of Responsibility
 > - Command
-> - Iterator
+> - [Iterator]()
 > - Mediator
 > - Memento
-> - [Observer]
-> - [Stategy]()
+> - [Observer]()
+> - Stategy
 > - State
 > - Visitor
 
 ___
 After years, the developer community has developed many 
-other design pattern which's more modern and effective. Below is the 3 most popular design pattern??? 
-#### Architect/Structture Pattern (Likely an architecture and pattern)
-> - MVC 
-> - MVP
-> - MVVM
+other design pattern which's more modern and effective. Below is the 3 most popular design pattern
+
+
+
 
 
 
@@ -108,8 +107,14 @@ ____
 
 *For more information, please research about the `anti-patterns` - which is the pattern that opposite the standard design pattern, developed by most scientist and high-experience engineers.*
 
-`Despite of the cristicism, desgin patterns have contributed a lot to the Software Engineering History, so I recommend you shoud learn it if you want to become a better engineer`
 
+`Despite of some cristicism, desgin patterns have contributed a lot to the Software Engineering History, so I recommend you shoud learn it if you want to become a better engineer`
+
+#### Architect/Structture Pattern (Likely an architecture and pattern)
+> - [Client-Server]()
+> - [MVC](/mvc/)
+> - MVP
+> - MVVM
 <!-- Blog of some "Trashing DP" -->
 [](https://www.red-gate.com/simple-talk/blogs/why-following-design-patterns-is-a-bad-idea/)
 [](https://sourcemaking.com/design_patterns)

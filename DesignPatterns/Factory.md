@@ -113,6 +113,9 @@ public class CoffeeShop {
 }
 ```
 
+## Result
+![](/factory/resuly-factory.png)
+
 ## Where to use it?
 - When we need reduce dependability among modules (loose coupling)
 - When we want to create a "easy-to-scale" product
