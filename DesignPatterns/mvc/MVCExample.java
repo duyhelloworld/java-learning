@@ -8,6 +8,6 @@ public class MVCExample {
         controller.save();
 
         controller.rename("MVC Pattern is the best, all other is trash!");
-        controller.save();   
+        controller.save();
     }
 }

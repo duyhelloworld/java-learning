@@ -1,33 +1,29 @@
 import java.time.LocalDate;
 
 public class ModelStudent {
+    private static long count = 0;
+    public int MAX_LENGTH_NAME = 10;
+
     private Long id;
     private String name;
     private LocalDate updatedDate;
 
     public boolean save() {
-        if (name.length() <= 10) {
+        if (name.length() <= MAX_LENGTH_NAME) {
             this.updatedDate = LocalDate.now();
             return true;
         }
         return false;
     }
 
-    public ModelStudent() {
-    }
-
-    public ModelStudent(Long id, String name, LocalDate updatedDate) {
-        this.id = id;
+    public ModelStudent(String name, LocalDate updatedDate) {
+        this.id = ++count;
         this.name = name;
         this.updatedDate = updatedDate;
     }
 
     public Long getId() {
         return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {

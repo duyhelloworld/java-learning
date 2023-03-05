@@ -1,6 +1,18 @@
 import java.time.format.DateTimeFormatter;
 
 public class ViewStudent {
+    private static ViewStudent instance;
+
+    private ViewStudent() {} ;
+
+    public static ViewStudent getView() {
+        if (instance == null) {
+            instance = new ViewStudent();
+        }
+        return instance;
+    }
+
+
     public void showHome() {
         System.out.println("Home page of Application.");
     }
@@ -19,7 +31,7 @@ public class ViewStudent {
         showDetailPage(student);
     }
 
-    public void showErrorMessage(int codeHttp) {
-        System.out.println("Something wrong!!!\nError code : " + codeHttp);
+    public void showErrorMessage(String messageError) {
+        System.out.println("Something wrong!!!\n" + messageError);
     }
 }

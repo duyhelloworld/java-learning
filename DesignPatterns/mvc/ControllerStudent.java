@@ -5,8 +5,8 @@ public class ControllerStudent {
     private ViewStudent view;
 
     public void initial() {
-        model = new ModelStudent(1L, "unknown", LocalDate.now());
-        view = new ViewStudent();
+        model = new ModelStudent("unknown", LocalDate.of(2023, 2, 12));
+        view = ViewStudent.getView();
     }
 
     public void showDetail() {
@@ -24,7 +24,7 @@ public class ControllerStudent {
         if (isSuccess) {
             view.showUpdatedPage(model);
         } else {
-            view.showErrorMessage(404);
+            view.showErrorMessage("Unable to create user with name's length greater than " + model.MAX_LENGTH_NAME);
         }
     }
 }
