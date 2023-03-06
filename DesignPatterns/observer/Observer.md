@@ -180,5 +180,5 @@ public class GoToWebsite {
 
 # Where used it?
 - Broadcast-type communication, when need change a object which refer to change the same at other objects
-- JDK : mark interface `Observer`
+- JDK : mark interface `Observerable`, logic in many standard library.
 - MVC Pattern : used to prevent Model from View (through Controller)

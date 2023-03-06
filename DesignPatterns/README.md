@@ -63,22 +63,13 @@ ___
 > - Template Method
 > - Chain of Responsibility
 > - Command
-> - [Iterator]()
+> - Iterator
 > - Mediator
 > - Memento
 > - [Observer]()
 > - Stategy
 > - State
 > - Visitor
-
-___
-After years, the developer community has developed many 
-other design pattern which's more modern and effective. Below is the 3 most popular design pattern
-
-
-
-
-
 
 ___
 ## Benefit of using Design Paterns
@@ -110,14 +101,16 @@ ____
 
 `Despite of some cristicism, desgin patterns have contributed a lot to the Software Engineering History, so I recommend you shoud learn it if you want to become a better engineer`
 
-#### Architect/Structture Pattern (Likely an architecture and pattern)
-> - [Client-Server]()
-> - [MVC](/mvc/)
-> - MVP
-> - MVVM
+___
+`Special` 
+[Architecture Pattern](/mvc/WhatDiffer.md)
+
+___
+## References
 <!-- Blog of some "Trashing DP" -->
-[](https://www.red-gate.com/simple-talk/blogs/why-following-design-patterns-is-a-bad-idea/)
-[](https://sourcemaking.com/design_patterns)
+[Dzone blog](https://dzone.com/articles/what-is-design-pattern)
+[Redgate forum](https://www.red-gate.com/simple-talk/blogs/why-following-design-patterns-is-a-bad-idea/)
+[SourceMaking](https://sourcemaking.com/design_patterns)
 
 ___
 ## What's the worst issue junior usually meet when learn how to use it?
