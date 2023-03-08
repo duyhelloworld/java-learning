@@ -1,12 +1,13 @@
-## Singleton - One of a Kind Objects
+# Singleton - One of a Kind Objects
 
 ## What's Singleton ?
-- The Singleton Pattern - like its name "singleton" -
+- The Singleton Pattern - like its name : "singleton" -
 assures that at any one time
-there is only one instance of the Singleton object and  provides a global access point to this instance. In other words, the Singleton's purpose is to control object creation, limiting the number of objects to one only per application.
+there is __only one instance__ of the Singleton object and  provides a __global access point__ to this instance.
+In other words, the Singleton's purpose is to control object creation, limiting the number of objects to one only per application.
 
 ## UML
-![](/singleton/singleton_uml.png)
+<!-- ![](/singleton/singleton_uml.png) -->
 
 ## How to implement Singleton ?
 ```java
@@ -36,15 +37,13 @@ public class DuckShop {
         Duck _duck1 = Duck.getInstance();
         Duck _duck2 = Duck.getInstance();
         System.out.println(_duck1.equals(_duck2));  // true
-        // Despite of the number of object created, just 1
-        // instance is created. At first, they are the same, so we can save more space and easy to interact with.
     }
 }
 ```
 
 ## Where used it?
 - Singeton pattern is used for logging, driver objects, caching and thread pool.
-- It is used in some standard API of Java (lang.Runtime, util.Calendar, awt.Desktop)
-- Some other DP is use Singleton : Abstract Factory, Builder, Facade ... 
+- It is used in some standard API of Java (java.lang.Runtime, java.util.Calendar, java.awt.Desktop)
+- Some other DP used Singleton for its implementation: Abstract Factory, Builder, Facade ... 
 
 `Note` : Implementation like above code is Eager Implementation. In reality, it can be destructured by reflection API in Java. You can search about some other implement ways (synchronize, double-check,...).

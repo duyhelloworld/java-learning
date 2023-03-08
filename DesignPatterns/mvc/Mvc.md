@@ -1,6 +1,6 @@
-## The legendary Architecutural Pattern of develper community
+## The Legendary Architectural Pattern in developer community
 
-![](/mvc/MVC_fun.jpg)
+<!--![](/mvc/MVC_fun.jpg)-->
 ## What's it? History?
 - `Definition` : MVC (Model-View-Controller) is a software architecture pattern for creating user interfaces on computers. MVC divides an application into three interoperable parts that separate the way the information is internally processed and the information presented and received by the user.
 - The MVC pattern was first introduced in 1979 by computer scientist Trygve Mikkjel Heyerdahl Reenskaug and first used in the programming language Small Talk.
@@ -8,13 +8,11 @@
 ## Structure 
 - MVC divide application into 3 building blocks, each block refer a fuction like its name:
 > + __M__ : The application data resides in the model. The most important role of a model is connect Database, manipulate and prepare data for Controller use.
-
 > + __V__ : Users see the application data (from Model) through the view, however, the view can’t influence what the user will do with the data. View can't get data directly from Model, this process must be throgh Controller.
-
 > + __C__ : The controller is the building block between the model and the view. View triggers events, subsequently, the controller acts on it. The action is typically a method call to the model. The response is shown in the view. In Controller, we should handle any business logic here.
 
 ## Flow 
-![](/mvc/Working-of-MVC.png)
+<!-- ![](/mvc/Working-of-MVC.png) -->
 > - First, when application start, nothing happen.
 > - When user access application, user request View for interacting.
 > - Now View send the data it need to Controller
@@ -177,7 +175,7 @@ public class MVCExample {
 
 `Result`
 
-![](/mvc/mvc_result.png)
+<!-- ![](/mvc/mvc_result.png) -->
 
 ## References
 - [FreeCodeCamp](https://www.freecodecamp.org/news/mvc-architecture-what-is-a-model-view-controller-framework/#:~:text=The%20MVC%20pattern%20was%20first,the%20programming%20language%20Small%20Talk.)

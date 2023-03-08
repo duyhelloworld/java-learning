@@ -4,7 +4,8 @@
 Yeah, the answer is `Architectural patterns`. There is a lot of confusion around that what is difference between Architectural pattern and Design pattern, so I just show you my opinion about this topic.
 
 ## What's an Architectural Pattern?
-- By Wikipedia : 
+- By Wikipedia :
+
     An __architectural pattern__ is a general, reusable solution to a commonly occurring problem in software architecture within a given context.
     The architectural patterns address various issues in software engineering, such as computer hardware performance limitations, high availability and minimization of a business risk. 
 
@@ -13,14 +14,14 @@ So unclear!
 
 ## What's the difference?
 - __Architectural Patterns__ are broader in scope than __Design Patterns__. 
-> + __Design Patterns__ provide very specific software related tasks whereas __Architectural Patterns__ are solutions for business problems.
-> + __Architectural Pattern__ focuses more on the abstract view of idea while __Design Patterns__ focuses on the implementation view of idea.
+  + __Design Patterns__ provide very specific software related tasks whereas __Architectural Patterns__ are solutions for business problems.
+  + __Architectural Pattern__ focuses more on the abstract view of idea while __Design Patterns__ focuses on the implementation view of idea.
 
 - Implementation of __Design Patterns__ are defined at granular level where as __Architectural Patterns__ are defined at high level. For example, different implementations of Factory and Builder pattern might look very similar in different projects. But same at Architectural Patterns can be varied a lot in different projects.
 
 - One __Architectural Pattern__ can be implemented by using many __Design Patterns__. There is one to many relationship between __Architectural Patterns__ and __Design Patterns__.
 
-![](/different_Archi_Desig.png)
+<!-- ![](/different_Archi_Desig.png) -->
 
 ## Popular Architectural Patterns
 - There are many popular architectural patterns (by formal documentation and by team developer rule ...). In this article, I will make a brief introduction about 4 most common architectural patterns : 

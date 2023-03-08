@@ -4,7 +4,7 @@
 
 - Factory Method is a creational design pattern that Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 
-## Which's problem Factory solve?
+## Example Problem
 
 - Its purpose is make your code loose coupled and more flexible. In the ordinary way, when you need to set up a `CoffeeFactory` you will type something like :
 
@@ -27,7 +27,7 @@ public class Capucino extends Coffee {
 }
 ```
 
-- But that make your code depend on the extensions of `Coffee`.
+- But that make your code depend on the extensions of `Coffee`. If missing interface, you will be difficult to recognize what is a Coffee.
 
 ```java
 Coffee americano = new Americano();
@@ -38,7 +38,7 @@ Coffee capucino = new Capucino();
 
 ## UML
 
-![](/factory/factory_uml.png)
+<!-- ![](/factory/factory_uml.png) -->
 
 ## Implementation
 
@@ -48,7 +48,7 @@ public interface Coffee {
 }
 ```
 
-`Java 8 support _enum_ type, so I will use it for easier switch-case.`
+`Java 8 support _enum_ type, so I will use it for easier switch-case. You can use string, int or anythng other.`
 
 ```java
 public enum CoffeeType {
@@ -56,6 +56,7 @@ public enum CoffeeType {
 }
 ```
 
++ Coffee implementation
 ```java
 public class Americano implements Coffee {
     @Override
@@ -79,6 +80,7 @@ public class Capucino implements Coffee {
 }
 ```
 
++ My Factory
 ```java
 public class CoffeeFactory {
     private CoffeeFactory() {};
@@ -98,6 +100,7 @@ public class CoffeeFactory {
 }
 ```
 
++ How My Factory be used
 ```java
 public class CoffeeShop {
     public static void main(String[] args) {
@@ -114,7 +117,7 @@ public class CoffeeShop {
 ```
 
 ## Result
-![](/factory/resuly-factory.png)
+<!-- ![](/factory/resuly-factory.png) -->
 
 ## Where to use it?
 - When we need reduce dependability among modules (loose coupling)
@@ -125,5 +128,5 @@ public class CoffeeShop {
 
 ## Where used it?
 - JDK : util.Calendar, NumberFormat,...
-- BeanFactory in Spring Framework, SessionFactory in Hibernate
 - Redefinement of it : Dependency Injection (Spring, .Net, Django)
+- BeanFactory in Spring Framework, SessionFactory in Hibernate

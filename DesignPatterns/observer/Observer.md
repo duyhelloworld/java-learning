@@ -7,9 +7,9 @@
 
 # Case
 - In a Big Tech, Our system need to tracking user data when they access to our website. 
-- When a user login, we must write log, checking IP address, block if their access is unknown... If their account expired, we must mail to their mail, set status to EXPIRED.
+- When a user login, we must write log, checking IP address, block if their access is unknown... If their account expired, we must send a notification to their mail, set status to EXPIRED in database.
 # UML 
-![](/observer/observer_uml.png)
+<!--![](/observer/observer_uml.png)-->
 
 # Code example
 ```java
@@ -176,9 +176,9 @@ public class GoToWebsite {
 ```
 
 ## Result
-![](/observer/result-observer.png)
+<!--![](/observer/result-observer.png)-->
 
-# Where used it?
+## Where used it?
 - Broadcast-type communication, when need change a object which refer to change the same at other objects
 - JDK : mark interface `Observerable`, logic in many standard library.
 - MVC Pattern : used to prevent Model from View (through Controller)

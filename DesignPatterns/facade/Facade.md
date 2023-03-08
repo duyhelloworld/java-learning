@@ -9,7 +9,7 @@ If you use them with business logic, import some library... your code will be ab
 - This pattern can be confused with [Adapter Pattern](), but each pattern has its purpose. Facade allow encapsuling source code for easier interact with other source.
 
 ## UML
-![](/facade/facade_uml.png)
+<!-- ![](/facade/facade_uml.png) -->
 
 ## How to implement it?
 - Facade often implement `Client` layer by `Singleton`.
@@ -156,4 +156,8 @@ public class Shop {
 ```
 
 ## Result
-![](/facade/result_facade.png)
+<!-- ![](/facade/result_facade.png) -->
+
+## Usage
+- When you want to provide simple interface to a complex sub-system.
+- When several dependencies exist between clients and the implementation classes of an abstraction.
