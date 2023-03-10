@@ -12,7 +12,7 @@
 > + __C__ : The controller is the building block between the model and the view. View triggers events, subsequently, the controller acts on it. The action is typically a method call to the model. The response is shown in the view. In Controller, we should handle any business logic here.
 
 ## Flow 
-<!-- ![](/mvc/Working-of-MVC.png) -->
+![](/mvc/Working-of-MVC.png)
 > - First, when application start, nothing happen.
 > - When user access application, user request View for interacting.
 > - Now View send the data it need to Controller
@@ -175,7 +175,7 @@ public class MVCExample {
 
 `Result`
 
-<!-- ![](/mvc/mvc_result.png) -->
+![](/mvc/mvc_result.png)
 
 ## References
 - [FreeCodeCamp](https://www.freecodecamp.org/news/mvc-architecture-what-is-a-model-view-controller-framework/#:~:text=The%20MVC%20pattern%20was%20first,the%20programming%20language%20Small%20Talk.)
