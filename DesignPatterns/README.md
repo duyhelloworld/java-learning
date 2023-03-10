@@ -4,20 +4,19 @@
 
 ______
 ## What Is Design Pattern?
-        - First, let back to the past, when programming is only inceptive structure. Our forerunners in the profession has developed the typical app several time, based on Object-Oriented programming languages. 
+ - First, let back to the past, when programming is only inceptive structure. Our forerunners in the profession has developed the typical app several time, based on Object-Oriented programming languages. 
 They __meet the same problem__,__follow a conception__ and __work in the same solution__.
 
 But noone make it more __architectural__ and aggregate these solutions, or make it more 'easy-access' for other junior. 
     
-    So, the software development process often extended
-    caused many negative impacts:
->            - Consuming a lot of time, effort and money of customers, reducing the credibility of the business
->            - Decreasing the product lifespan
->            - Easy lead to potential vulnerabilities or overlooked issues
->            - Make difficulties in maintaining and upgrading the project in the future
->            - Causing challenges for developers to unify common conventions.
+So, the software development process often extended  caused many negative impacts:
+>     - Consuming a lot of time, effort and money of customers, reducing the credibility of the business
+>     - Decreasing the product lifespan
+>     - Easy lead to potential vulnerabilities or overlooked issues
+>     - Make difficulties in maintaining and upgrading the project in the future
+>     - Causing challenges for developers to unify common conventions.
 
-            - Over time, Libraries and frameworks appeared, supported much for making faster software development process and went a long towards a development model where we can just pick and choose componets and plug them right in. But... they don't help us structure our own applications in ways that are easier to understand, more maintainable and flexible. That’s where Design Patterns come in. 
+- Over time, Libraries and frameworks appeared, supported much for making faster software development process and went a long towards a development model where we can just pick and choose componets and plug them right in. But... they don't help us structure our own applications in ways that are easier to understand, more maintainable and flexible. That’s where Design Patterns come in. 
 
 - In  1995, there are 4 senior developers who aggregate and write to the [Design Patterns: Elements Of Reusable Object-Oriented Software]("http://www.amazon.co.uk/Design-patterns-elements-reusable-object-oriented/dp/0201633612") - the "bible" of many software developer over time (The authors is call `"Gang of Four"`). This book has architect 23 "forms" for developers to structure classes and objects to
 solve certain problems in many OOP languages. It encouraged the software engineers should study and structure the product in a more effective way. Some language's corporations like Oracle (Java) and Microsoft (C#) on supporting a lot of features for their language to conform with these "forms".
