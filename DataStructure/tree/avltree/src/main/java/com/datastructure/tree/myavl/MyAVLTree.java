@@ -25,7 +25,7 @@ public class MyAVLTree implements MethodOfAVL {
         return rebalance(root);
     }
 
-    public Node rebalance(Node node) {
+    private Node rebalance(Node node) {
         return null;
     }
 
@@ -36,7 +36,7 @@ public class MyAVLTree implements MethodOfAVL {
 
     @Override
     public void add(int value) {
-        root = insert(root, value);
+        add(new Node(value));
     }
 
     @Override

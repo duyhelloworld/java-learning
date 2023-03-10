@@ -66,7 +66,15 @@ public class Node {
         }
     }
 
-    public boolean isLeaf(Node node) {
+    public void postOrder(Node root) {
+        if (root != null) {
+            postOrder(root.left);
+            postOrder(root.right);
+            System.out.print(root.value + "\t");
+        }
+    }
+
+    private boolean isLeaf(Node node) {
         return node.left == null && node.right == null;
     }
 
@@ -76,6 +84,13 @@ public class Node {
         } else {
             return elsdetNode(node.left);
         }
+    }
+
+    private Node oldestNode(Node node){
+        if (node.right == null) {
+            return node;
+        }
+        return oldestNode(node.right);
     }
 
     public Node delNode(Node cur, int value) {
@@ -102,10 +117,15 @@ public class Node {
                 return cur.left;
             }
             // + Case 3 : 2 child
-            Node nodeSmallest = elsdetNode(cur.right); // trái cùng của con bên phải
-            cur.value = nodeSmallest.value; // no swap. assign and delete
+            // Node nodeSmallest = elsdetNode(cur.right); // trái cùng của con bên phải
+            // cur.value = nodeSmallest.value; // no swap. assign and delete
 
-            cur.right = delNode(cur.right, nodeSmallest.value);
+            // cur.right = delNode(cur.right, nodeSmallest.value);
+            Node biggestNode = oldestNode(cur.left);
+            cur.value = biggestNode.value;
+
+            // Re balance
+            cur.left = delNode(cur.left, biggestNode.value);
         }
         return cur;
     }

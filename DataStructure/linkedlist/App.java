@@ -58,6 +58,7 @@ public class App {
                         if (list.isEmpty()) {
                             System.out.println("List empty. Choose 5 to enter data.");
                             break;
+                
                         }
                         System.out.println("Data : ");
                         int data = scanner.nextInt();

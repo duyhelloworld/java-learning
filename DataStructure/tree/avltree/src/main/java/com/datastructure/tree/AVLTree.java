@@ -123,7 +123,7 @@ public class AVLTree {
     }
 
     public String checkUnBalance(Node root) {
-        //khai bao stack de luu tru cac node da duyet qua
+        // khai bao stack de luu tru cac node da duyet qua
         Stack<Node> stack = new Stack<>();
         Node current = root;
         //kiem tra xem node dang xet co null hay khong, hoac stack co trong hay khong
@@ -143,17 +143,11 @@ public class AVLTree {
         return "Cay can bang";
     }
 
-    private boolean checkBalance(Node z) {
-        //can phai di qua tat ca cac node de kiem tra  
-//        Su dung ham nay trong truong hop can test insert va delete node tren tree ma ko goi ham rebalance
-        updateHeight(z);
-        int balance = getBalance(z);
-        if (balance > 1 || balance < -1) {
-            return true;
-        }
-        return false;
-    }
-
+    /*
+     *          y
+     *      x
+     *          z
+     */
     private Node rotateRight(Node y) {
         Node x = y.left;
         Node z = x.right;
@@ -163,6 +157,11 @@ public class AVLTree {
         updateHeight(x);
         return x;
     }
+    /*
+     *          x
+     *      y   
+     *          z
+     */
 
     private Node rotateLeft(Node y) {
         Node x = y.right;
@@ -180,6 +179,17 @@ public class AVLTree {
 
     private int height(Node n) {
         return n == null ? -1 : n.height;
+    }
+
+    private boolean checkBalance(Node z) {
+        // can phai di qua tat ca cac node de kiem tra
+        // Su dung ham nay trong truong hop can test insert va delete node tren tree ma ko goi ham rebalance
+        updateHeight(z);
+        int balance = getBalance(z);
+        if (Math.abs(balance) > 1) {
+            return true;
+        }
+        return false;
     }
 
     public int getBalance(Node n) {

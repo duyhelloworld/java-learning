@@ -52,7 +52,7 @@ ___
 > - Prototype
 #### Structural Patterns
 > - Adapter
-> - [Facade]()
+> - [Facade](/facade/Facade.md)
 > - Decorator
 > - Flyweight
 > - Proxy
@@ -66,7 +66,7 @@ ___
 > - Iterator
 > - Mediator
 > - Memento
-> - [Observer]()
+> - [Observer](/observer/Observer.md)
 > - Stategy
 > - State
 > - Visitor
