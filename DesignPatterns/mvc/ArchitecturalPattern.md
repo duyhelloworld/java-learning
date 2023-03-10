@@ -34,7 +34,7 @@ So unclear!
 
 2. MVC
 
-[Model-View-Controller, legendary architecture pattern](./Mvc.md)
+[Model-View-Controller, legendary architecture pattern](./MVC.md)
 
 3. N-Layer Pattern
 - Decompose programs into group of subtasks (Layer). Each layer provides services to the next higher layer.
