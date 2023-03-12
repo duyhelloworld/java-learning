@@ -55,7 +55,7 @@ public class AVLTree {
             throw new RuntimeException("duplicate Key!");
         }
         return rebalance(root); 
-//        updateHeight(node);
+        // updateHeight(root);
 //        return root;
     }
 
@@ -100,18 +100,17 @@ public class AVLTree {
     }
 
     private Node rebalance(Node z) {
-        updateHeight(z);                // cap nhat chieu cao cua node
-        int balance = getBalance(z);    // tinh balance factor
-        if (balance > 1) {              // mat can bang ve phia ben phai
+        updateHeight(z);                            // cap nhat chieu cao cua node
+        int balance = getBalance(z);                // tinh balance factor
+        if (balance > 1) {                          // mat can bang ve phia ben phai
             if (height(z.right.right) > height(z.right.left)) {
-                                        // mat can bang han ve ben phai
-                z = rotateLeft(z);      // thuc hien thao tac quay trai
-            } else {                    // mat can bang ve phia ben phai va cay con bi lech trai
-                z.right = rotateRight(z.right);
-                                        // thuc hien phep quay phai
-                z = rotateLeft(z);      // thuc hien phep quay trai
+                                                    // mat can bang han ve ben phai
+                z = rotateLeft(z);                  // thuc hien thao tac quay trai
+            } else {                                // mat can bang ve phia ben phai va cay con bi lech trai
+                z.right = rotateRight(z.right);     // thuc hien phep quay phai
+                z = rotateLeft(z);                  // thuc hien phep quay trai
             }
-        } else if (balance < -1) {//mat can bang ve phia ben trai
+        } else if (balance < -1) {                  //mat can bang ve phia ben trai
             if (height(z.left.left) > height(z.left.right)) {
                 z = rotateRight(z);
             } else {
@@ -138,7 +137,7 @@ public class AVLTree {
             if (checkBalance(top)) {
                 return "Mat can bang tai node: " + top.value;
             }
-            current = top.right;//xet cho cay con ben phai.            
+            current = top.right; //xet cho cay con ben phai.            
         }
         return "Cay can bang";
     }

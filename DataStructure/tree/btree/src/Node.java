@@ -1,7 +1,8 @@
+import java.util.Stack;
+
 public class Node {
     int value;
     Node left, right;
-    int level;
 
     public Node(int value) {
         this.value = value;
@@ -50,6 +51,25 @@ public class Node {
         }
     }
 
+    public void inOrderByStack(Node root){
+        if (root == null) {
+            return;
+        }
+        Stack<Node> st = new Stack<>();
+        st.push(root);
+
+        while (root != null && !st.isEmpty()) {
+            while (root != null) {
+                st.push(root);
+                root = root.left;
+            }
+            // logic
+            root = st.pop();
+            System.out.println(root.value + "\t");
+            root = root.right;
+        }
+    }
+
     public void preOrder(Node root) {
         if (root != null) {
             System.out.print(root.value + "\t");
@@ -78,11 +98,11 @@ public class Node {
         return node.left == null && node.right == null;
     }
 
-    public Node elsdetNode(Node node) {
+    public Node elsdestNode(Node node) {
         if (node.left == null) {
             return node;
         } else {
-            return elsdetNode(node.left);
+            return elsdestNode(node.left);
         }
     }
 
@@ -117,7 +137,7 @@ public class Node {
                 return cur.left;
             }
             // + Case 3 : 2 child
-            // Node nodeSmallest = elsdetNode(cur.right); // trái cùng của con bên phải
+            // Node nodeSmallest = elsdestNode(cur.right); // trái cùng của con bên phải
             // cur.value = nodeSmallest.value; // no swap. assign and delete
 
             // cur.right = delNode(cur.right, nodeSmallest.value);

@@ -9,7 +9,5 @@ public interface Methods {
 
     boolean isLeaf(int value);
 
-    Node eldestChild();
-
     boolean remove(int value);
 }

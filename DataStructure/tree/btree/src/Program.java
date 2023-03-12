@@ -1,6 +1,6 @@
 public class Program {
     public static void main(String[] args) {
-        Tree tree = new Tree();
+        BSTree tree = new BSTree();
         tree.add( 48);
         tree.add( 50);
         tree.add( 32);
