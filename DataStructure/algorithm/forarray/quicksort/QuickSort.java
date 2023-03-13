@@ -1,13 +1,17 @@
 package forarray.quicksort;
 
+import java.util.Arrays;
+
 public class QuickSort {
-    void qSort(int[] arr, int l, int h){
-        if (arr == null || l >= h) {
+
+    // Pivot in Middle
+    static void qSort(int[] arr, int low, int high) {
+        if (arr == null || low >= high) {
             return;
         }
 
-        int mid = h / 2 - l / 2 + l;
-        int pivot = arr[mid], i = l, j = h;
+        int pivot = arr[(high - low) / 2 + low];
+        int i = low, j = high;
 
         while (i <= j) {
             while (arr[i] < pivot) {
@@ -15,14 +19,33 @@ public class QuickSort {
             }
 
             while (arr[j] > pivot) {
-                --j;
+                j--;
             }
 
-            if (i >= j) {
-                int tmp = arr[i];arr[i] = arr[j];arr[j] = tmp;   // SWAP
-                
-            }
+            if (i > j)
+                break;
+
+            // SWAP
+            int tmp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = tmp;
+            i++;
+            j--;
         }
 
+        if (low < j) {
+            qSort(arr, low, j);
+        }
+
+        if (i < high) {
+            qSort(arr, i, high);
+        }
+    }
+    
+    public static void main(String[] args) {
+        int[] arr = { 1, 12, 5, 26, 7, 14, 3, 8, 2 };
+        System.out.println(Arrays.toString(arr));
+        QuickSort.qSort(arr, 0, arr.length - 1);
+        System.out.print(Arrays.toString(arr));
     }
 }

@@ -1,7 +1,5 @@
 package fortree.duycode;
 
-import java.util.Arrays;
-
 /**
  * 0    1   2   3   4   5   6   7   8   
  * __________________________________
@@ -9,14 +7,10 @@ import java.util.Arrays;
  */
 
 public class HeapTree {
-    int[] heaptree;
+    private int[] heaptree;
 
-    public HeapTree(int[] src) {
-        this.heaptree = src;
-    }
-
-    private int root() {
-        return heaptree[0];
+    public HeapTree(int[] heaptree) {
+        this.heaptree = heaptree;
     }
 
     private void swap(int[] src, int i, int j){
@@ -29,7 +23,7 @@ public class HeapTree {
         return heaptree.length;
     }
 
-    private int lastestParent() {
+    private int firstNonLeafNode() {
         return (int) Math.floor(size() / 2 - 1);
     }
 
@@ -49,14 +43,13 @@ public class HeapTree {
         return heaptree[2 * index + 2];
     }
 
-    private boolean isLeaf(int index) {
-        return 2 * index > size() && index <= size();
-    }
+    // private boolean isLeaf(int index) {
+    //     return 2 * index > size() && index <= size();
+    // }
 
-    private int getParent(int index) {
-        return (int) Math.floor((index - 1) / 2);
-        // floor : round down
-    }
+    // private int getParent(int index) {
+    //     return (int) Math.floor((index - 1) / 2);
+    // }
 
     private void heapify(int[] arr, int n, int i) {
         int largest = i;
@@ -70,20 +63,37 @@ public class HeapTree {
         }
         if (largest != i) {
             swap(arr, i, largest);
-            // return;
         }
-        // heapify(arr, n, largest);
+        heapify(arr, n, largest);
     }
 
-    public void sort(int[] arr) {
-        int n = arr.length;
-        for (int i = n / 2 - 1; i >= 0; i--) {
-            heapify(arr, n, i);
+    public void sort() {
+        int n = heaptree.length;
+        for (int i = firstNonLeafNode(); i >= 0; i--) {
+            heapify(heaptree, n, i);
+        }
+
+        for (int i = n - 1; i >= 0; i--) {
+            int temp = heaptree[i];
+            heaptree[i] = heaptree[0];
+            heaptree[0] = temp;
+
+            heapify(heaptree, i, 0);
         }
     }
-
+    
     public void print() {
+        int n = heaptree.length;
+        for (int i = 0; i < n; ++i)
+            System.out.print(heaptree[i] + "\t");
+        System.out.println();
+    }
+    
+    public static void main(String[] args) {
+        int[] src = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+        HeapTree tree = new HeapTree(src);
         System.out.println("_____________________________");
-        System.out.println(Arrays.toString(heaptree));
+        tree.sort();
+        tree.print();
     }
 }
