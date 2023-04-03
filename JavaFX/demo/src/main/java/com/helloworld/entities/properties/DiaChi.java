@@ -35,20 +35,22 @@ public class DiaChi {
 
     @Override
     public String toString() {
-        if(this.dia_chi_o_pho == null) {
+        if(this.dia_chi_o_que != null) {
             return "xã " + this.dia_chi_o_que.get(Que.XA) 
                 + ",huyện " + this.dia_chi_o_que.get(Que.HUYEN)
                 + ",tỉnh " + this.dia_chi_o_que.get(Que.TINH);
         } 
+
         if (this.dia_chi_o_pho.get(Pho.NGO) != null) {
             return "số " + this.dia_chi_o_pho.get(Pho.SO)
                 + ", ngõ " + this.dia_chi_o_pho.get(Pho.NGO)
-                + ",đường " + this.dia_chi_o_pho.get(Pho.DUONG) 
-                + ",quận " + this.dia_chi_o_pho.get(Pho.QUAN);
+                + ", đường " + this.dia_chi_o_pho.get(Pho.DUONG) 
+                + ", quận " + this.dia_chi_o_pho.get(Pho.QUAN);
         }
+        
         return "số " + this.dia_chi_o_pho.get(Pho.SO)
-                + ",đường " + this.dia_chi_o_pho.get(Pho.DUONG) 
-                + ",quận " + this.dia_chi_o_pho.get(Pho.QUAN);
+                + ", đường " + this.dia_chi_o_pho.get(Pho.DUONG) 
+                + ", quận " + this.dia_chi_o_pho.get(Pho.QUAN);
     }
 
 }

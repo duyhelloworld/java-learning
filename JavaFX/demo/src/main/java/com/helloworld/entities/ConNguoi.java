@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import com.helloworld.entities.properties.DiaChi;
 import com.helloworld.entities.properties.HoTen;
+import com.helloworld.entities.properties.WrongFormatException;
 
 public abstract class ConNguoi {
     private Long maso;
@@ -24,7 +25,7 @@ public abstract class ConNguoi {
     public ConNguoi() {
     }
 
-    public ConNguoi(HoTen hoten, LocalDate ngay_sinh, DiaChi dia_chi_hien_tai, DiaChi que_quan, String email, String so_dien_thoai) {
+    public ConNguoi(HoTen hoten, LocalDate ngay_sinh, DiaChi dia_chi_hien_tai, DiaChi que_quan, String so_dien_thoai) {
         this.hoten = hoten;
         this.ngay_sinh = ngay_sinh;
         this.dia_chi_hien_tai = dia_chi_hien_tai;
@@ -42,6 +43,10 @@ public abstract class ConNguoi {
 
     public HoTen getHoten() {
         return this.hoten;
+    }
+
+    public String getHoTen() {
+        return this.hoten.toString();
     }
 
     public void setHoten(HoTen hoten) {
@@ -72,8 +77,9 @@ public abstract class ConNguoi {
         this.que_quan = que_quan;
     }
 
+    // Not used, just to override
     public String getEmail() {
-        return "@huce.edu.vn";
+        return "unknown@huce.edu.vn";
     }
 
     public String getSo_dien_thoai() {
@@ -81,7 +87,15 @@ public abstract class ConNguoi {
     }
 
     public void setSo_dien_thoai(String so_dien_thoai) {
-        this.so_dien_thoai = so_dien_thoai;
+        try {
+            String regex = "^0\\d{9}$";
+            if (!so_dien_thoai.matches(regex)) {
+                throw new WrongFormatException("Invalid phone number format");
+            }
+            this.so_dien_thoai = so_dien_thoai;
+        } catch (WrongFormatException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

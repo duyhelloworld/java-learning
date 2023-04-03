@@ -37,9 +37,14 @@ public class HoTen {
         this.ten = ten;
     }
 
-    // public boolean equals(String hoten) {
-    // return hoten.contains(ten) && hoten.contains(ho) && hoten.contains(ten_dem);
-    // }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof HoTen)) {
+            return false;
+        }
+        HoTen hoten = (HoTen) obj;
+        return hoten.ten.equals(ten) && hoten.ho.equals(ho) && hoten.ten_dem.equals(ten_dem);
+    }
 
     @Override
     public String toString() {
